@@ -151,12 +151,43 @@ npm publish
 **后续更新流程：**
 
 ```bash
-# 修改或新增图片后
-npm version patch           # 或 minor / major
+# 先提交git，确保工作目录是干净的
 git add .
-git commit -m "chore: release vX.X.X"
+git commit -m "feat: your changes for 1.1.0"
+
+# 使用npm version，修改版本信息，默认会自动创建提交和标签
+npm version patch    # 或 minor / major
+npm version minor -m "chore(release): bump version to %s"
+
+# git推送与npm发布
 git push
 npm publish
+```
+
+**npm version相关**
+
+```bash
+# 手动管理git的提交
+npm version minor --no-git-tag-version
+git add .
+git commit -m "chore: release vX.X.X"
+git tag vX.X.X
+git push
+npm publish
+
+# 其他命令
+## 直接使用会修改package.json 和 package-lock.json 中的版本号，
+## 并且进行Git 提交、打标签操作，要求工作目录必须是干净的，否则运行失败。
+npm version patch    # 或 minor / major
+## --force参数，会跳过工作目录是否干净的检查
+npm version minor --force
+## 自定义提交信息，使用 %s 占位符，它会被自动替换为升级后的新版本号。
+npm version minor -m "chore(release): bump version to %s"
+## 全局设置git-tag-version=false，
+## npm version 将默认不进行任何 Git 操作（不检查、不提交、不打标签）。
+npm config set git-tag-version false
+## 命令中显式覆盖
+npm version minor --git-tag-version
 ```
 
 ---
