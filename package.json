@@ -1,0 +1,25 @@
+{
+  "name": "xijie-m24",
+  "version": "1.0.0",
+  "description": "A personal static assets repository hosted on npm — images served via unpkg & jsDelivr CDN.",
+  "files": [
+    "images/"
+  ],
+  "keywords": [
+    "images",
+    "assets",
+    "cdn",
+    "static",
+    "xijie-m24"
+  ],
+  "author": "xijie-m24",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xijie-m24/xijie-m24.git"
+  },
+  "homepage": "https://github.com/xijie-m24/xijie-m24#readme",
+  "bugs": {
+    "url": "https://github.com/xijie-m24/xijie-m24/issues"
+  }
+}
