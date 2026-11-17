@@ -73,7 +73,8 @@ npm pack vue --dry-run  # 预览远程包（如 vue）打包的文件
 ```bash
 # npm view是联网查看（例：npm view vue）
 npm view xijie-m24          # 查看包信息
-npm view xijie-m24 versions # 查看所有已发布版本
+npm view xijie-m24 versions # 查看所有已发布版本，优先本地缓存（未过期时）
+npm view xijie-m24 versions --prefer-online  # 强制远程 Registry（网络优先）
 npm view xijie-m24 files    # 查看包内文件列表，白名单机制，package.json 中的 files 字段
 npm view xijie-m24 dependencies  # 查看依赖项
 npm view xijie-m24 --json   # 查看完整 package.json 信息
@@ -173,6 +174,7 @@ git add .
 git commit -m "chore: release vX.X.X"
 git tag vX.X.X
 git push
+git push origin main --tags
 npm publish
 
 # 其他命令
