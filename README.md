@@ -4,14 +4,14 @@ A personal static assets repository hosted on npm, served through unpkg & jsDeli
 
 一个托管在 npm 上的个人静态资源仓库，通过 unpkg / jsDelivr CDN 访问。
 
-- **GitHub**: https://github.com/xijie-m24/xijie-m24
+- **GitHub**: https://github.com/xijie-m24/npm_xijie-m24
 - **npm**: https://www.npmjs.com/package/xijie-m24
 
 ---
 
 ## 🖼️ 图片访问链接
 
-### joined-github.svg
+### 通过 unpkg 和 jsDelivr 来访问npm包中的资源
 
 - **unpkg**
   ```
@@ -20,23 +20,27 @@ A personal static assets repository hosted on npm, served through unpkg & jsDeli
 - **jsDelivr**
   ```
   https://cdn.jsdelivr.net/npm/xijie-m24@latest/images/joined-github.svg
+  https://fastly.jsdelivr.net/npm/xijie-m24@latest/images/joined-github.svg
   ```
 
 > 💡 生产环境建议用**具体版本号**（如 `@1.0.0`）替代 `@latest`，避免内容变动带来的风险。
 
+### 访问github仓库里的资源
+
+- **GitHub 官方 Raw 链接（直链）**
+  ```
+  https://raw.githubusercontent.com/xijie-m24/npm_xijie-m24/main/images/joined-github.svg
+  ```
+- **jsDelivr CDN 链接（🌟 强烈推荐）**
+  ```
+  https://cdn.jsdelivr.net/gh/xijie-m24/npm_xijie-m24@main/images/joined-github.svg
+  ```
+
+> 💡 由于 GitHub 官方直链在某些地区（如中国大陆）访问可能较慢或不稳定，通常推荐使用免费的 **jsDelivr** CDN 来加速 GitHub 资源。
+
 ---
 
 ## 📦 npm 常用命令笔记
-
-### 初始化 / 安装
-
-```bash
-npm init -y                 # 生成默认 package.json
-npm install                 # 安装依赖
-npm install <pkg>           # 安装生产依赖
-npm install <pkg> -D        # 安装开发依赖
-npm uninstall <pkg>         # 卸载依赖
-```
 
 ### 账号 / 登录
 
@@ -86,8 +90,8 @@ npm view vue module
 
 ```bash
 git init
-git remote add origin git@github.com:xijie-m24/xijie-m24.git
-git remote set-url origin git@xxxxx:xijie-m24/xijie-m24.git    # 修改origin
+git remote add origin git@github.com:xijie-m24/npm_xijie-m24.git
+git remote set-url origin git@xxxxx:xijie-m24/npm_xijie-m24.git    # 修改origin
 git remote -v               # 查看远程地址
 git branch -M main          # 重命名主分支为 main
 ```
@@ -126,7 +130,7 @@ git reset --soft HEAD~1     # 撤销最近一次提交（保留改动）
 ```bash
 # 1. 初始化 git 并关联 GitHub（SSH）
 git init
-git remote add origin git@github.com:xijie-m24/xijie-m24.git
+git remote add origin git@github.com:xijie-m24/npm_xijie-m24.git
 git branch -M main
 
 # 2. 首次提交并推送

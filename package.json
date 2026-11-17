@@ -16,10 +16,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xijie-m24/xijie-m24.git"
+    "url": "git+https://github.com/xijie-m24/npm_xijie-m24.git"
   },
-  "homepage": "https://github.com/xijie-m24/xijie-m24#readme",
+  "homepage": "https://github.com/xijie-m24/npm_xijie-m24#readme",
   "bugs": {
-    "url": "https://github.com/xijie-m24/xijie-m24/issues"
+    "url": "https://github.com/xijie-m24/npm_xijie-m24/issues"
   }
 }
