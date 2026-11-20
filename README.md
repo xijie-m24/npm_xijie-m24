@@ -11,6 +11,15 @@ A personal static assets repository hosted on npm, served through unpkg & jsDeli
 
 ## 🖼️ 图片访问链接
 
+---
+
+<p align="center">
+  <img src="images/bg001.jpg" width="400" alt="images/bg001.jpg">
+  <img src="images/joined-github.svg" width="400" alt="images/joined-github.svg">
+</p>
+
+---
+
 ### 通过 unpkg 和 jsDelivr 来访问npm包中的资源
 
 - **unpkg**
